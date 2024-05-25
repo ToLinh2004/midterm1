@@ -7,12 +7,12 @@ export const userData = {
 };
 
 // Edit the User component code to output the userData data
-export function User(props) {
-  const {firstName,lastName,title}=props
+export function User() {
+ 
   return (
     <div id="user" data-testid="user">
-      <h2>{firstName} {lastName}</h2>
-      <p>{title}</p>
+      <h2>{userData.firstName} {userData.lastName}</h2>
+      <p>{userData.title}</p>
     </div>
   );
 }
@@ -23,7 +23,7 @@ function App() {
     <div id="app">
       <h1>WELCOME !!</h1>
       <p>PNV students are you ready to React Course ? You got this 💪</p>
-      <User firstName={userData.firstName} lastName={userData.lastName} title={userData.title}/>
+      <User />
     </div>
   );
 }
